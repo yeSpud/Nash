@@ -5,8 +5,9 @@ import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
 public class createWindow {
-	public static void addLabel(JFrame window, JLabel label, String displayString, int gridx, int gridy, int gridw, int gridh) {
-		label = new JLabel (displayString);
+	public static void addLabel(JFrame window, JLabel label, String displayString, int gridx, int gridy, int gridw,
+			int gridh) {
+		label = new JLabel(displayString);
 		label.setVerticalAlignment(SwingConstants.CENTER);
 		label.setHorizontalAlignment(SwingConstants.CENTER);
 		GridBagConstraints GridLayout = new GridBagConstraints();

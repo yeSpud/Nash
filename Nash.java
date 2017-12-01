@@ -156,7 +156,6 @@ public class Nash {
 		GridLayout.gridwidth = 1;
 		GridLayout.gridheight = 2;
 		Window.add(Answer, GridLayout);
-		// createWindow.addLabel(Window, Answer, "None", 13, 2, 1, 2);
 
 		aUpLeft.addKeyListener(new KeyAdapter() {
 			@Override
@@ -199,7 +198,7 @@ public class Nash {
 				}
 			}
 		});
-		
+
 		bUpRight.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent e) {
@@ -213,7 +212,7 @@ public class Nash {
 				}
 			}
 		});
-		
+
 		aDownLeft.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent e) {
@@ -255,7 +254,7 @@ public class Nash {
 				}
 			}
 		});
-		
+
 		bDownRight.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent e) {
@@ -281,16 +280,18 @@ public class Nash {
 				double aInDownRight = Double.parseDouble(aDownRight.getText().replace(" ", ""));
 				double bInDownRight = Double.parseDouble(bDownRight.getText().replace(" ", ""));
 
-				System.out.println(aInUpLeft);
-				System.out.println(bInUpLeft);
-				System.out.println(aInDownLeft);
-				System.out.println(bInDownLeft);
-
-				System.out.println(aInUpRight);
-				System.out.println(bInUpRight);
-				System.out.println(aInDownRight);
-				System.out.println(bInDownRight);
-
+				/*
+				 * System.out.println(aInUpLeft); System.out.println(bInUpLeft);
+				 * System.out.println(aInDownLeft); System.out.println(bInDownLeft);
+				 * 
+				 * System.out.println(aInUpRight); System.out.println(bInUpRight);
+				 * System.out.println(aInDownRight); System.out.println(bInDownRight);
+				 * 
+				 * System.out.println("Calculating...");
+				 */
+				Answer.setText("Calculating...");
+				Answer.setText(calculation.Nash(aInUpLeft, bInUpLeft, aInDownLeft, bInDownLeft, aInUpRight, bInUpRight,
+						aInDownRight, bInDownRight));
 			}
 		});
 		Reset.addActionListener(new ActionListener() {
@@ -307,7 +308,7 @@ public class Nash {
 			}
 		});
 
-		Window.setSize(302, 112);
+		Window.setSize(402, 112);
 		Window.setVisible(true);
 		// System.out.println("Width: " + Window.getWidth() + "\nHeight: " +
 		// Window.getHeight());
