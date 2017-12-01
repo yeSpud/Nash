@@ -281,15 +281,6 @@ public class Nash {
 				double aInDownRight = Double.parseDouble(aDownRight.getText().replace(" ", ""));
 				double bInDownRight = Double.parseDouble(bDownRight.getText().replace(" ", ""));
 
-				/*
-				 * System.out.println(aInUpLeft); System.out.println(bInUpLeft);
-				 * System.out.println(aInDownLeft); System.out.println(bInDownLeft);
-				 * 
-				 * System.out.println(aInUpRight); System.out.println(bInUpRight);
-				 * System.out.println(aInDownRight); System.out.println(bInDownRight);
-				 * 
-				 * System.out.println("Calculating...");
-				 */
 				Answer.setText("Calculating...");
 				Answer.setText(calculation.Nash(aInUpLeft, bInUpLeft, aInDownLeft, bInDownLeft, aInUpRight, bInUpRight,
 						aInDownRight, bInDownRight));
