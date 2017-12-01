@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import java.awt.event.ActionEvent;
@@ -292,6 +293,11 @@ public class Nash {
 				Answer.setText("Calculating...");
 				Answer.setText(calculation.Nash(aInUpLeft, bInUpLeft, aInDownLeft, bInDownLeft, aInUpRight, bInUpRight,
 						aInDownRight, bInDownRight));
+				if (Answer.getText() == "No answer") {
+					Answer.setForeground(Color.RED);
+				} else {
+					Answer.setForeground(Color.BLACK);
+				}
 			}
 		});
 		Reset.addActionListener(new ActionListener() {
@@ -305,6 +311,7 @@ public class Nash {
 				aDownRight.setText(" ");
 				bDownRight.setText(" ");
 				Answer.setText("None");
+				Answer.setForeground(Color.BLACK);
 			}
 		});
 
