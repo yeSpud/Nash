@@ -5,9 +5,13 @@ If each player has chosen a strategy and no player can benefit by changing strat
 
 Usually this is tedious to calculate, so I made a calculator to do it for you :P
 
-## Requirements
+## Installation
 
-Java must be installed on your computer in order to run the jar. For those on macOS, you can skip this, as there is an app that launches Jar files for you. For thoese on windows, follow these steps:
+### MacOS
+There is already an applicaiton preinstalled with macOS that runs Jars, so you should be good to go. Just [download](https://github.com/jeffrypig23/Nash/raw/master/Nash.jar) and run the Jar.
+
+### Windows
+Java must be installed on your computer in order to run the jar. In order to do that, and get the Jar onto your computer, follow these steps:
 
 1. Download the isntaller for [Java](http://javadl.oracle.com/webapps/download/AutoDL?BundleId=227549_e758a0de34e24606bca991d704f6dcbf)
 
