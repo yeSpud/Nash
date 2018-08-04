@@ -13,7 +13,7 @@ There is already an applicaiton preinstalled with macOS that runs Jars, so you s
 ### Windows
 Java must be installed on your computer in order to run the jar. In order to do that, and get the Jar onto your computer, follow these steps:
 
-1. Download the isntaller for [Java](http://javadl.oracle.com/webapps/download/AutoDL?BundleId=227549_e758a0de34e24606bca991d704f6dcbf)
+1. Download the installer for [Java](http://javadl.oracle.com/webapps/download/AutoDL?BundleId=227549_e758a0de34e24606bca991d704f6dcbf)
 
 2. Run the installer
 
