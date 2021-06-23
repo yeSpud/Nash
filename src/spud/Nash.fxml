@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="70.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="70.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="70.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="70.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="70.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="70.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="70.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="70.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="70.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="70.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="70.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="70.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="70.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="70.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" minWidth="70.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="-Infinity" minHeight="70.0" prefHeight="100.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="70.0" prefHeight="100.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="70.0" prefHeight="100.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="-Infinity" minHeight="70.0" prefHeight="100.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="1268.0" text="Player B" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.columnSpan="11">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="Player_A" alignment="CENTER" prefHeight="281.0" prefWidth="313.0" rotate="-0.0" text="Player A" GridPane.rowIndex="2" GridPane.rowSpan="2">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <rotationAxis>
+            <Point3D z="11.0" />
+         </rotationAxis>
+      </Label>
+      <Label alignment="CENTER" prefHeight="100.0" prefWidth="229.0" text="Down" GridPane.columnIndex="1" GridPane.rowIndex="3">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" prefHeight="100.0" prefWidth="842.0" text="Up" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="215.0" prefWidth="323.0" text="(" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="221.0" prefWidth="398.0" text="(" GridPane.columnIndex="2" GridPane.rowIndex="3">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <TextField prefHeight="166.0" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="2">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </TextField>
+      <TextField prefHeight="220.0" prefWidth="150.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </TextField>
+      <TextField prefHeight="172.0" prefWidth="86.0" GridPane.columnIndex="5" GridPane.rowIndex="2">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </TextField>
+      <TextField prefHeight="212.0" prefWidth="86.0" GridPane.columnIndex="5" GridPane.rowIndex="3">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </TextField>
+      <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="318.0" prefWidth="293.0" text="," GridPane.columnIndex="4" GridPane.rowIndex="2">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="185.0" prefWidth="234.0" text="," GridPane.columnIndex="4" GridPane.rowIndex="3">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label prefHeight="237.0" prefWidth="232.0" text=")" GridPane.columnIndex="6" GridPane.rowIndex="2">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label prefHeight="181.0" prefWidth="160.0" text=")" GridPane.columnIndex="6" GridPane.rowIndex="3">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Separator prefHeight="724.0" prefWidth="46.0" GridPane.columnIndex="7" GridPane.rowIndex="1" GridPane.rowSpan="3" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="221.0" prefWidth="398.0" text="(" GridPane.columnIndex="8" GridPane.rowIndex="3">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="215.0" prefWidth="323.0" text="(" GridPane.columnIndex="8" GridPane.rowIndex="2">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <TextField prefHeight="166.0" prefWidth="150.0" GridPane.columnIndex="9" GridPane.rowIndex="2">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </TextField>
+      <TextField prefHeight="166.0" prefWidth="150.0" GridPane.columnIndex="9" GridPane.rowIndex="3">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </TextField>
+      <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="318.0" prefWidth="293.0" text="," GridPane.columnIndex="10" GridPane.rowIndex="2">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="318.0" prefWidth="293.0" text="," GridPane.columnIndex="10" GridPane.rowIndex="3">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="1445.0" text="Left" textAlignment="CENTER" GridPane.columnIndex="2" GridPane.columnSpan="5" GridPane.rowIndex="1">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField prefHeight="172.0" prefWidth="86.0" GridPane.columnIndex="11" GridPane.rowIndex="2">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </TextField>
+      <TextField prefHeight="172.0" prefWidth="86.0" GridPane.columnIndex="11" GridPane.rowIndex="3">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </TextField>
+      <Label prefHeight="237.0" prefWidth="232.0" text=")" GridPane.columnIndex="12" GridPane.rowIndex="2">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label prefHeight="237.0" prefWidth="232.0" text=")" GridPane.columnIndex="12" GridPane.rowIndex="3">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="904.0" text="Right" textAlignment="CENTER" GridPane.columnIndex="8" GridPane.columnSpan="5" GridPane.rowIndex="1">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Separator prefHeight="400.0" prefWidth="247.0" GridPane.columnIndex="13" GridPane.rowSpan="4" />
+      <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="Calculate" GridPane.columnIndex="14" GridPane.rowIndex="1">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Button>
+   </children>
+</GridPane>
