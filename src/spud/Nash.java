@@ -29,7 +29,15 @@ public class Nash extends Application {
 	 */
 	public static TextField LeftUpA, LeftUpB, RightUpA, RightUpB, LeftDownA, LeftDownB, RightDownA, RightDownB;
 
+	/**
+	 * TODO Documentation
+	 */
 	private static final Calculate calculate = new Calculate();
+
+	/**
+	 * TODO Documentation
+	 */
+	protected static final Reset reset = new Reset();
 
 	@Override
 	public void start(Stage primaryStage) {
