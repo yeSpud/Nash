@@ -16,14 +16,11 @@ public class Calculate implements EventHandler<ActionEvent> {
 		this.findCorrect(Nash.RightUpB, Nash.LeftUpB);
 		this.findCorrect(Nash.RightDownB, Nash.LeftDownB);
 
-		Nash.LeftUpA.setDisable(true);
-		Nash.LeftDownA.setDisable(true);
-		Nash.RightUpA.setDisable(true);
-		Nash.RightDownA.setDisable(true);
-		Nash.LeftUpB.setDisable(true);
-		Nash.LeftDownB.setDisable(true);
-		Nash.RightUpB.setDisable(true);
-		Nash.RightDownB.setDisable(true);
+		TextField[] textFields = new TextField[]{Nash.LeftUpA, Nash.LeftUpB, Nash.RightUpA, Nash.RightUpB, Nash.LeftDownA,
+				Nash.LeftDownB, Nash.RightDownA, Nash.RightDownB};
+		for (TextField textField : textFields) {
+			textField.setDisable(true);
+		}
 
 		Nash.button.setText("Reset");
 		Nash.button.setOnAction(Nash.reset);
@@ -41,14 +38,14 @@ public class Calculate implements EventHandler<ActionEvent> {
 		}
 
 		if (Double.parseDouble(a.getText()) > Double.parseDouble(b.getText())) {
-			a.setStyle(CORRECT);
-			b.setStyle(INCORRECT);
+			a.setStyle(Calculate.CORRECT);
+			b.setStyle(Calculate.INCORRECT);
 		} else if (Double.parseDouble(a.getText()) < Double.parseDouble(b.getText())) {
-			a.setStyle(INCORRECT);
-			b.setStyle(CORRECT);
+			a.setStyle(Calculate.INCORRECT);
+			b.setStyle(Calculate.CORRECT);
 		} else {
-			a.setStyle(CORRECT);
-			b.setStyle(CORRECT);
+			a.setStyle(Calculate.CORRECT);
+			b.setStyle(Calculate.CORRECT);
 		}
 	}
 }

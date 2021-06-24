@@ -32,7 +32,7 @@ public class Nash extends Application {
 	/**
 	 * TODO Documentation
 	 */
-	private static final Calculate calculate = new Calculate();
+	protected static final Calculate calculate = new Calculate();
 
 	/**
 	 * TODO Documentation
