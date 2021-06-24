@@ -3,6 +3,7 @@ package spud;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.TextField;
+import org.jetbrains.annotations.NotNull;
 
 public class Calculate implements EventHandler<ActionEvent> {
 
@@ -23,7 +24,7 @@ public class Calculate implements EventHandler<ActionEvent> {
 		}
 
 		Nash.button.setText("Reset");
-		Nash.button.setOnAction(Nash.reset);
+		Nash.button.setOnAction(Nash.RESET);
 	}
 
 	/**
@@ -31,16 +32,17 @@ public class Calculate implements EventHandler<ActionEvent> {
 	 * @param a
 	 * @param b
 	 */
-	private void findCorrect(TextField a, TextField b) {
+	private void findCorrect(@NotNull TextField a, @NotNull TextField b) {
 
-		if (a == null | b == null) {
+		String aInput = a.getText(), bInput = b.getText();
+		if (aInput.isEmpty() || bInput.isEmpty()) {
 			return;
 		}
 
-		if (Double.parseDouble(a.getText()) > Double.parseDouble(b.getText())) {
+		if (Double.parseDouble(aInput) > Double.parseDouble(bInput)) {
 			a.setStyle(Calculate.CORRECT);
 			b.setStyle(Calculate.INCORRECT);
-		} else if (Double.parseDouble(a.getText()) < Double.parseDouble(b.getText())) {
+		} else if (Double.parseDouble(aInput) < Double.parseDouble(bInput)) {
 			a.setStyle(Calculate.INCORRECT);
 			b.setStyle(Calculate.CORRECT);
 		} else {

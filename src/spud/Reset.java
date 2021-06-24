@@ -3,6 +3,7 @@ package spud;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.TextField;
+import org.jetbrains.annotations.NotNull;
 
 public class Reset implements EventHandler<ActionEvent> {
 
@@ -15,18 +16,14 @@ public class Reset implements EventHandler<ActionEvent> {
 			this.resetTextField(textField);
 		}
 
-		Nash.button.setOnAction(Nash.calculate);
+		Nash.button.setOnAction(Nash.CALCULATE);
 	}
 
 	/**
 	 * TODO Documentation
 	 * @param textField
 	 */
-	private void resetTextField(TextField textField) {
-
-		if (textField == null) {
-			return;
-		}
+	private void resetTextField(@NotNull TextField textField) {
 
 		textField.clear();
 		textField.setStyle("");
