@@ -3,7 +3,6 @@ package spud;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.control.TextField;
-import org.jetbrains.annotations.NotNull;
 
 public class Calculate implements EventHandler<ActionEvent> {
 
@@ -32,7 +31,7 @@ public class Calculate implements EventHandler<ActionEvent> {
 	 * @param a
 	 * @param b
 	 */
-	private void findCorrect(@NotNull TextField a, @NotNull TextField b) {
+	private void findCorrect(TextField a, TextField b) {
 
 		String aInput = a.getText(), bInput = b.getText();
 		if (aInput.isEmpty() || bInput.isEmpty()) {

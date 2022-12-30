@@ -1,14 +1,11 @@
 package spud;
 
 import javafx.scene.control.TextFormatter;
-import org.intellij.lang.annotations.RegExp;
-import org.jetbrains.annotations.NotNull;
 
 import java.util.function.UnaryOperator;
 
 public class InputCheck implements UnaryOperator<TextFormatter.Change> {
 
-	@RegExp
 	private static final String REGEX = "[^0-9]";
 
 	/**
@@ -16,7 +13,7 @@ public class InputCheck implements UnaryOperator<TextFormatter.Change> {
 	 * https://gist.github.com/karimsqualli96/f8d4c2995da8e11496ed
 	 */
 	@Override
-	public TextFormatter.Change apply(@NotNull TextFormatter.Change change) {
+	public TextFormatter.Change apply(TextFormatter.Change change) {
 
 		if (change.isReplaced()) {
 			if (change.getText().matches(InputCheck.REGEX)) {
