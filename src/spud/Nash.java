@@ -12,6 +12,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -23,11 +25,11 @@ public class Nash extends Application {
 		Nash.launch(args);
 	}
 
-	public Button button;
+	private Button button;
 
-	public TextField LeftUpA, LeftUpB, RightUpA, RightUpB, LeftDownA, LeftDownB, RightDownA, RightDownB;
+	private TextField LeftUpA, LeftUpB, RightUpA, RightUpB, LeftDownA, LeftDownB, RightDownA, RightDownB;
 
-	public TextField[] AllFields;
+	private TextField[] AllFields;
 
 	private final Calculate CalculateOperation = new Calculate();
 
@@ -63,53 +65,35 @@ public class Nash extends Application {
 				}
 				case "LeftUpA" -> {
 					LeftUpA = (TextField) element;
-					LeftUpA.textProperty().addListener(new InputValidation());//.setOnAction(new InputValidation());
-					/*
-					LeftUpA.setTextFormatter(new TextFormatter<>(changed -> {
-
-						if (changed.isContentChange()) {
-							if (!changed.getText().matches("\\d*")) {
-								changed.setText(changed.getControlText().substring(changed.getRangeStart(), changed.getRangeEnd()));
-							}
-						}
-						return changed;
-					}));*/
-					//LeftUpA.setTextFormatter(new TextFormatter<>(new InputCheck()));
+					LeftUpA.textProperty().addListener(new InputValidation());
 				}
 				case "LeftUpB" -> {
 					LeftUpB = (TextField) element;
 					LeftUpB.textProperty().addListener(new InputValidation());
-					//LeftUpB.setTextFormatter(new TextFormatter<>(new InputCheck()));
 				}
 				case "RightUpA" -> {
 					RightUpA = (TextField) element;
 					RightUpA.textProperty().addListener(new InputValidation());
-					//RightUpA.setTextFormatter(new TextFormatter<>(new InputCheck()));
 				}
 				case "RightUpB" -> {
 					RightUpB = (TextField) element;
 					RightUpB.textProperty().addListener(new InputValidation());
-					//RightUpB.setTextFormatter(new TextFormatter<>(new InputCheck()));
 				}
 				case "LeftDownA" -> {
 					LeftDownA = (TextField) element;
 					LeftDownA.textProperty().addListener(new InputValidation());
-					//LeftDownA.setTextFormatter(new TextFormatter<>(new InputCheck()));
 				}
 				case "LeftDownB" -> {
 					LeftDownB = (TextField) element;
 					LeftDownB.textProperty().addListener(new InputValidation());
-					//LeftDownB.setTextFormatter(new TextFormatter<>(new InputCheck()));
 				}
 				case "RightDownA" -> {
 					RightDownA = (TextField) element;
 					RightDownA.textProperty().addListener(new InputValidation());
-					//RightDownA.setTextFormatter(new TextFormatter<>(new InputCheck()));
 				}
 				case "RightDownB" -> {
 					RightDownB = (TextField) element;
 					RightDownB.textProperty().addListener(new InputValidation());
-					//RightDownB.setTextFormatter(new TextFormatter<>(new InputCheck()));
 				}
 			}
 		}
@@ -158,47 +142,60 @@ public class Nash extends Application {
 
 		private static final String CORRECT = "-fx-text-fill: green", INCORRECT = "-fx-text-fill: red;";
 
+		private static final Font SUPER_CORRECT = Font.font("System Regular", FontWeight.EXTRA_BOLD, 13);
+
 		@Override
 		public void handle(ActionEvent event) {
-
-			findCorrect(LeftUpA, LeftDownA);
-			findCorrect(RightUpA, RightDownA);
-			findCorrect(RightUpB, LeftUpB);
-			findCorrect(RightDownB, LeftDownB);
-
 
 			for (TextField textField : AllFields) {
 				textField.setDisable(true);
 			}
 
+			colorDominant(LeftUpA, LeftDownA);
+			colorDominant(RightUpA, RightDownA);
+			colorDominant(RightUpB, LeftUpB);
+			colorDominant(RightDownB, LeftDownB);
+
+			colorCorrect(LeftUpA, LeftUpB);
+			colorCorrect(RightUpA, RightUpB);
+			colorCorrect(LeftDownA, LeftDownB);
+			colorCorrect(RightDownA, RightDownB);
+
 			button.setText("Reset");
 			button.setOnAction(ResetOperation);
 		}
 
-		private void findCorrect(TextField a, TextField b) {
+		private void colorDominant(TextField field1, TextField field2) {
 
-			String aInput = a.getText(), bInput = b.getText();
+			String aInput = field1.getText(), bInput = field2.getText();
 			if (aInput.isEmpty() || bInput.isEmpty()) {
 				return;
 			}
 
 			try {
 				if (Double.parseDouble(aInput) > Double.parseDouble(bInput)) {
-					a.setStyle(CORRECT);
-					b.setStyle(INCORRECT);
+					field1.setStyle(CORRECT);
+					field2.setStyle(INCORRECT);
 				} else if (Double.parseDouble(aInput) < Double.parseDouble(bInput)) {
-					a.setStyle(INCORRECT);
-					b.setStyle(CORRECT);
+					field1.setStyle(INCORRECT);
+					field2.setStyle(CORRECT);
 				} else {
-					a.setStyle(CORRECT);
-					b.setStyle(CORRECT);
+					field1.setStyle(CORRECT);
+					field2.setStyle(CORRECT);
 				}
 			} catch (NumberFormatException notNumber) {
-				a.clear();
-				b.clear();
+				field1.clear();
+				field2.clear();
 			}
 		}
 
+		private void colorCorrect(TextField playerA, TextField playerB) {
+
+			if (playerA.getStyle().equals(CORRECT) && playerB.getStyle().equals(CORRECT)) {
+				playerA.setFont(SUPER_CORRECT);
+				playerB.setFont(SUPER_CORRECT);
+			}
+		}
 	}
 
 	private class Reset implements EventHandler<ActionEvent> {
@@ -209,6 +206,7 @@ public class Nash extends Application {
 			for (TextField textField : AllFields) {
 				textField.clear();
 				textField.setStyle("");
+				textField.setFont(Font.getDefault());
 				textField.setDisable(false);
 			}
 
