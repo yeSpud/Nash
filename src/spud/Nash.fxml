@@ -72,11 +72,21 @@
             <Insets bottom="6.0" />
         </GridPane.margin></Label>
     <TextField fx:id="LeftUpA" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="50.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+    <TextField fx:id="LeftUpB" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="50.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+    <TextField fx:id="RightUpA" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="50.0" GridPane.columnIndex="10" GridPane.rowIndex="2" />
+    <TextField fx:id="RightUpB" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="50.0" GridPane.columnIndex="12" GridPane.rowIndex="2" />
     <TextField fx:id="LeftDownA" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="50.0" GridPane.columnIndex="3" GridPane.rowIndex="4">
         <GridPane.margin>
             <Insets />
         </GridPane.margin>
     </TextField>
+    <TextField fx:id="LeftDownB" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="50.0" GridPane.columnIndex="5" GridPane.rowIndex="4">
+        <GridPane.margin>
+            <Insets />
+        </GridPane.margin>
+    </TextField>
+    <TextField fx:id="RightDownA" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="50.0" GridPane.columnIndex="10" GridPane.rowIndex="4" />
+    <TextField fx:id="RightDownB" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="50.0" GridPane.columnIndex="12" GridPane.rowIndex="4" />
     <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="," GridPane.columnIndex="4" GridPane.rowIndex="2">
         <font>
             <Font size="26.0" />
@@ -85,12 +95,6 @@
         <font>
             <Font size="26.0" />
         </font></Label>
-    <TextField fx:id="LeftUpB" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="50.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-    <TextField fx:id="LeftDownB" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="50.0" GridPane.columnIndex="5" GridPane.rowIndex="4">
-        <GridPane.margin>
-            <Insets />
-        </GridPane.margin>
-    </TextField>
     <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text=")" GridPane.columnIndex="6" GridPane.rowIndex="2">
         <font>
             <Font size="29.0" />
@@ -124,8 +128,6 @@
         <GridPane.margin>
             <Insets bottom="6.0" />
         </GridPane.margin></Label>
-    <TextField fx:id="RightUpA" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="50.0" GridPane.columnIndex="10" GridPane.rowIndex="2" />
-    <TextField fx:id="RightDownA" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="50.0" GridPane.columnIndex="10" GridPane.rowIndex="4" />
     <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text="," GridPane.columnIndex="11" GridPane.rowIndex="2">
         <font>
             <Font size="26.0" />
@@ -134,8 +136,6 @@
         <font>
             <Font size="26.0" />
         </font></Label>
-    <TextField fx:id="RightUpB" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="50.0" GridPane.columnIndex="12" GridPane.rowIndex="2" />
-    <TextField fx:id="RightDownB" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="50.0" GridPane.columnIndex="12" GridPane.rowIndex="4" />
     <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" text=")" GridPane.columnIndex="13" GridPane.rowIndex="2">
         <GridPane.margin>
             <Insets bottom="6.0" right="10.0" />
