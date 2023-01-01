@@ -5,4 +5,6 @@ module Nash {
 	requires javafx.fxml;
 
 	opens spud;
+
+	exports spud;
 }
