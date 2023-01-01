@@ -11,4 +11,4 @@ Usually this is tedious to calculate, so I made a calculator to do it for you.
 
 ## Running
 
-Download the [jar](raw/master/Nash.jar), and run it from the command line by typing `java -jar path/to/jar`.
+Download the [jar](Nash.jar), and run it from the command line by typing `java -jar path/to/jar`.
